@@ -27,4 +27,5 @@ bBones is a variation of the Dice 10000 game described above.
 - Add in having to roll all 6 dice again. At present, all 6 die are rolled, there is no way to roll again and that turn must end.
 - Add in end-game condition. There is no code for a "redemption phase" yet.
 - Add in networking. Hopefully, when finished, this will be able to have a game between two computers or more wirelessly.
+- Dice graphics instead of numbers in buttons.
 - Code cleanup.
