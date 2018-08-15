@@ -19,12 +19,10 @@ bBones is a variation of the Dice 10000 game described above.
 - If a player goes above 10000 points, the other players are given one turn to attempt to beat that score. If another player goes over 10000 during this "redemption phase", this player becomes the winner. The other players who have not taken their "redemption" turn now have to attempt to beat this player.
 
 #### Completed:
-- Basic die functionality and scoring.
+- Mostly complete die functionality and scoring.
 - Up to 12 local players on one machine, each of which can be uniquely named.
 
 #### To-do:
-- Add in score condition for a straight. There is no code for this at all yet.
-- Add in having to roll all 6 dice again. At present, all 6 die are rolled, there is no way to roll again and that turn must end.
 - Add in end-game condition. There is no code for a "redemption phase" yet.
 - Add in networking. Hopefully, when finished, this will be able to have a game between two computers or more wirelessly.
 - Dice graphics instead of numbers in buttons.

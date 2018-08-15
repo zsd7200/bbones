@@ -29,6 +29,7 @@ namespace bbone
         List<int[]> rolls;
         #endregion
 
+        #region Die Selection and Marking
         // used to mark rolls in the rolls list and to validate dice rolls
         private int[] CountDice()
         {
@@ -36,24 +37,28 @@ namespace bbone
 
             for (int i = 0; i < dice.Length; i++)
             {
-                if (dice[i].Text == "1" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[0]++;
-                else if (dice[i].Text == "2" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[1]++;
-                else if (dice[i].Text == "3" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[2]++;
-                else if (dice[i].Text == "4" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[3]++;
-                else if (dice[i].Text == "5" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[4]++;
-                else if (dice[i].Text == "6" && dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
-                    diceCount[5]++;
+                if (dice[i].Enabled == true && dice[i].BackColor == Color.DarkGreen)
+                    switch(dice[i].Text)
+                    {
+                        case "1":
+                            diceCount[0]++; break;
+                        case "2":
+                            diceCount[1]++; break;
+                        case "3":
+                            diceCount[2]++; break;
+                        case "4":
+                            diceCount[3]++; break;
+                        case "5":
+                            diceCount[4]++; break;
+                        case "6":
+                            diceCount[5]++; break;
+                    }
             }
 
             return diceCount;
         }
 
-        // make sure the dies selected are valid
+        // make sure the dice selected are valid
         private bool DieSelectValidation()
         {
             int[] count = CountDice();
@@ -74,10 +79,36 @@ namespace bbone
                 return false;
 
             rolls.Add(count);
+            updateScoreText();
 
             return true;
         }
 
+        // helper method to check for straights
+        private bool StraightChecker()
+        {
+            int[] count = CountDice();
+
+            // reset stuff if it's already visible
+            if (straightLabel.Visible == true)
+            {
+                straightLabel.Visible = false;
+                roll_button.Enabled = true;
+            }
+
+            if (count[0] == 1 && count[1] == 1 && count[2] == 1 && count[3] == 1 && count[4] == 1 && count[5] == 1)
+            {
+                straightLabel.Visible = true;
+                roll_button.Enabled = false;
+                error_msg.Visible = false;
+                return true;
+            }
+
+            return false;
+        }
+        #endregion
+
+        #region Score Updating/Calculation
         // calculate score
         private int ScoreCalc()
         {
@@ -85,8 +116,7 @@ namespace bbone
 
             int score = 0;
 
-            int[] count = CountDice();
-            rolls.Add(count);
+            rolls.Add(CountDice());
 
             for (int i = 0; i < rolls.Count; i++)
                 score += ScoreAdd(rolls[i]);
@@ -103,6 +133,10 @@ namespace bbone
         private int ScoreAdd(int[] count)
         {
             int score = 0;
+
+            // condition for a straight
+            if (count[0] == 1 && count[1] == 1 && count[2] == 1 && count[3] == 1 && count[4] == 1 && count[5] == 1)
+                return 1000;
 
             switch (count[0])
             {
@@ -162,6 +196,16 @@ namespace bbone
             return score;
         }
 
+        // update roll score text
+        private void updateScoreText()
+        {
+            int score = 0;
+            for (int i = 0; i < rolls.Count; i++)
+                score += ScoreAdd(rolls[i]);
+            currScore.Text = "Current Roll Score: " + score;
+        }
+        #endregion
+
         // initialize the form
         public Form1()
         {
@@ -184,7 +228,9 @@ namespace bbone
                 scoreLabels[i].TextAlign = ContentAlignment.MiddleRight;
             }
 
+            currScore.Visible = false;
             error_msg.Visible = false;
+            straightLabel.Visible = false;
 
             // big font size
             Font font = new Font(die1.Font.FontFamily, 72);
@@ -257,38 +303,32 @@ namespace bbone
 
             if (DieSelectValidation() == true)
             {
-                for (int i = 0; i < dice.Length; i++)
-                {
-                    if (dice[i].BackColor == Color.DarkGreen && dice[i].Enabled == true)
-                        dice[i].Enabled = false;
+                // if all dice are selected, reroll all
+                if (dice[0].BackColor == Color.DarkGreen && dice[1].BackColor == Color.DarkGreen && dice[2].BackColor == Color.DarkGreen && dice[3].BackColor == Color.DarkGreen && dice[4].BackColor == Color.DarkGreen && dice[5].BackColor == Color.DarkGreen)
+                    reroll_all_Click(sender, e);
 
-                    if (dice[i].BackColor == Color.White)
+                // otherwise, only roll non-selected dice and disable pre-selected dice
+                else
+                {
+                    for (int i = 0; i < dice.Length; i++)
                     {
-                        int roll = rgen.Next(1, 7);
-                        dice[i].Text = "" + roll;
+                        if (dice[i].BackColor == Color.DarkGreen && dice[i].Enabled == true)
+                            dice[i].Enabled = false;
+
+                        if (dice[i].BackColor == Color.White)
+                        {
+                            int roll = rgen.Next(1, 7);
+                            dice[i].Text = "" + roll;
+                        }
                     }
                 }
-
-
             }
 
             // display "invalid dice" message if selection does not pass through dieselect
             else
                 error_msg.Visible = true;
-        }
 
-        // rerolling function
-        private void reroll_all_Click(object sender, EventArgs e)
-        {
-            error_msg.Visible = false;
-
-            for (int i = 0; i < dice.Length; i++)
-            {
-                int roll = rgen.Next(1, 7);
-                dice[i].Text = "" + roll;
-                dice[i].BackColor = Color.White;
-                dice[i].Enabled = true;
-            }
+            StraightChecker();
         }
 
         // end turn, finalize score calculation
@@ -296,15 +336,15 @@ namespace bbone
         {
             error_msg.Visible = false;
 
-            Console.WriteLine(ScoreCalc());
+            int score = ScoreCalc();
 
             // add to score (if player has appropriate points, of course)
             if (scores[currentPlayer] == 0)
-                if (ScoreCalc() < 1000) { }
+                if (score < 1000) { }
                 else
-                    scores[currentPlayer] += ScoreCalc();
+                    scores[currentPlayer] += score;
             else
-                scores[currentPlayer] += ScoreCalc();
+                scores[currentPlayer] += score;
 
             if (scores[currentPlayer] <= 950)
             {
@@ -320,6 +360,9 @@ namespace bbone
             if (currentPlayer >= scores.Length)
                 currentPlayer = 0;
 
+            // reset current score label
+            currScore.Text = "Current Roll Score: 0";
+
             // end turn by rerolling all dice
             reroll_all_Click(sender, e);
         }
@@ -328,6 +371,7 @@ namespace bbone
         private void startButt_Click(object sender, EventArgs e)
         {
             error_msg.Visible = false;
+            straightLabel.Visible = false;
 
             // start the game
             if (numPlayers.Enabled == true)
@@ -358,6 +402,9 @@ namespace bbone
                 for (int i = 0; i < dice.Length; i++)
                     dice[i].Enabled = true;
 
+                currScore.Text = "Current Roll Score: 0";
+                currScore.Visible = true;
+
                 // officially start game by rerolling all dice
                 reroll_all_Click(sender, e);
             }
@@ -384,7 +431,38 @@ namespace bbone
 
                 roll_button.Enabled = false;
                 endTurn_butt.Enabled = false;
+                currScore.Visible = false;
+                currScore.Text = "Current Roll Score: 0";
             }
+        }
+
+        // rerolling all dice function
+        private void reroll_all_Click(object sender, EventArgs e)
+        {
+            error_msg.Visible = false;
+
+            for (int i = 0; i < dice.Length; i++)
+            {
+                int roll = rgen.Next(1, 7);
+                dice[i].Text = "" + roll;
+                dice[i].BackColor = Color.White;
+                dice[i].Enabled = true;
+            }
+
+            StraightChecker();
+        }
+
+        // debug roll a straight
+        private void roll_straight_Click(object sender, EventArgs e)
+        {
+            dice[0].Text = "1";
+            dice[1].Text = "2";
+            dice[2].Text = "3";
+            dice[3].Text = "4";
+            dice[4].Text = "5";
+            dice[5].Text = "6";
+
+            StraightChecker();
         }
         #endregion
     }
