@@ -80,7 +80,6 @@ namespace bbone
                 return false;
 
             rolls.Add(count);
-            updateScoreText();
 
             return true;
         }
@@ -198,11 +197,15 @@ namespace bbone
         }
 
         // update roll score text
-        private void updateScoreText()
+        private void UpdateScoreText()
         {
             int score = 0;
+
             for (int i = 0; i < rolls.Count; i++)
                 score += ScoreAdd(rolls[i]);
+
+            score += ScoreAdd(CountDice());
+
             currScore.Text = "Current Roll Score: " + score;
         }
         #endregion
@@ -233,6 +236,7 @@ namespace bbone
             currScore.Visible = false;
             error_msg.Visible = false;
             straightLabel.Visible = false;
+            allSelectLabel.Visible = false;
 
             // big font size
             Font font = new Font(die1.Font.FontFamily, 1);
@@ -259,6 +263,8 @@ namespace bbone
                 die1.BackColor = Color.DarkGreen;
             else
                 die1.BackColor = Color.White;
+
+            UpdateScoreText();
         }
         private void die2_Click(object sender, EventArgs e)
         {
@@ -266,6 +272,8 @@ namespace bbone
                 die2.BackColor = Color.DarkGreen;
             else
                 die2.BackColor = Color.White;
+
+            UpdateScoreText();
         }
         private void die3_Click(object sender, EventArgs e)
         {
@@ -273,6 +281,8 @@ namespace bbone
                 die3.BackColor = Color.DarkGreen;
             else
                 die3.BackColor = Color.White;
+
+            UpdateScoreText();
         }
         private void die4_Click(object sender, EventArgs e)
         {
@@ -280,6 +290,8 @@ namespace bbone
                 die4.BackColor = Color.DarkGreen;
             else
                 die4.BackColor = Color.White;
+
+            UpdateScoreText();
         }
         private void die5_Click(object sender, EventArgs e)
         {
@@ -287,6 +299,9 @@ namespace bbone
                 die5.BackColor = Color.DarkGreen;
             else
                 die5.BackColor = Color.White;
+
+            UpdateScoreText();
+
         }
         private void die6_Click(object sender, EventArgs e)
         {
@@ -294,6 +309,8 @@ namespace bbone
                 die6.BackColor = Color.DarkGreen;
             else
                 die6.BackColor = Color.White;
+
+            UpdateScoreText();
         }
         #endregion
 
@@ -341,7 +358,7 @@ namespace bbone
             error_msg.Visible = false;
             allSelectLabel.Visible = false;
 
-            if (dice[0].BackColor == Color.DarkGreen && dice[1].BackColor == Color.DarkGreen && dice[2].BackColor == Color.DarkGreen && dice[3].BackColor == Color.DarkGreen && dice[4].BackColor == Color.DarkGreen && dice[5].BackColor == Color.DarkGreen)
+            if (StraightChecker() == false && dice[0].BackColor == Color.DarkGreen && dice[1].BackColor == Color.DarkGreen && dice[2].BackColor == Color.DarkGreen && dice[3].BackColor == Color.DarkGreen && dice[4].BackColor == Color.DarkGreen && dice[5].BackColor == Color.DarkGreen)
                 allSelectLabel.Visible = true;
             else
             {
@@ -435,6 +452,7 @@ namespace bbone
 
                 for (int i = 0; i < dice.Length; i++)
                 {
+                    dice[i].BackgroundImage = null;
                     dice[i].BackColor = Color.White;
                     dice[i].Text = "👍🏻";
                     dice[i].Enabled = false;
@@ -466,11 +484,17 @@ namespace bbone
         private void roll_straight_Click(object sender, EventArgs e)
         {
             dice[0].Text = "1";
+            dice[0].BackgroundImage = diceImgs[0];
             dice[1].Text = "2";
+            dice[1].BackgroundImage = diceImgs[1];
             dice[2].Text = "3";
+            dice[2].BackgroundImage = diceImgs[2];
             dice[3].Text = "4";
+            dice[3].BackgroundImage = diceImgs[3];
             dice[4].Text = "5";
+            dice[4].BackgroundImage = diceImgs[4];
             dice[5].Text = "6";
+            dice[5].BackgroundImage = diceImgs[5];
 
             StraightChecker();
         }

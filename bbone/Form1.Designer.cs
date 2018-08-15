@@ -472,7 +472,6 @@
             this.roll_straight.TabIndex = 39;
             this.roll_straight.Text = "Roll Straight";
             this.roll_straight.UseVisualStyleBackColor = true;
-            this.roll_straight.Visible = false;
             this.roll_straight.Click += new System.EventHandler(this.roll_straight_Click);
             // 
             // allSelectLabel
