@@ -1,5 +1,6 @@
 # bBones ![Dice Logo](https://github.com/zsd7200/bbones/img/logo_small.png)
 bBones, a dice game written in C# and WinForms.
+![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
 ![Screenshot](https://github.com/zsd7200/bbones/img/screenshot.png)
 
