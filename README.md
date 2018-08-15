@@ -25,5 +25,5 @@ bBones is a variation of the Dice 10000 game described above.
 #### To-do:
 - Add in end-game condition. There is no code for a "redemption phase" yet.
 - Add in networking. Hopefully, when finished, this will be able to have a game between two computers or more wirelessly.
-- Dice graphics instead of numbers in buttons.
+- Try to convert dice methods to work with _just_ the dice graphics instead of text in dice. Or figure out a way to hide the dice graphics entirely.
 - Code cleanup.
