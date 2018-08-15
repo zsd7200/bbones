@@ -21,6 +21,7 @@ namespace bbone
         bool back;
 
         // arrays and lists to hold dice, labels, player scores and names, and rolls
+        Image[] diceImgs;
         Button[] dice;
         Label[] scoreLabels;
         Label[] nameLabels;
@@ -215,6 +216,7 @@ namespace bbone
             nameLabels = new Label[12] { p1_score, p2_score, p3_score, p4_score, p5_score, p6_score, p7_score, p8_score, p9_score, p10_score, p11_score, p12_score };
             scoreLabels = new Label[12] { p1_num, p2_num, p3_num, p4_num, p5_num, p6_num, p7_num, p8_num, p9_num, p10_num, p11_num, p12_num };
             dice = new Button[6] { die1, die2, die3, die4, die5, die6 };
+            diceImgs = new Image[6] { Properties.Resources._1, Properties.Resources._2, Properties.Resources._3, Properties.Resources._4, Properties.Resources._5, Properties.Resources._6 };
             rolls = new List<int[]>();
 
             currentPlayer = 0;
@@ -233,7 +235,7 @@ namespace bbone
             straightLabel.Visible = false;
 
             // big font size
-            Font font = new Font(die1.Font.FontFamily, 72);
+            Font font = new Font(die1.Font.FontFamily, 1);
 
             // get dice ready
             for (int i = 0; i < dice.Length; i++)
@@ -318,6 +320,7 @@ namespace bbone
                         if (dice[i].BackColor == Color.White)
                         {
                             int roll = rgen.Next(1, 7);
+                            dice[i].BackgroundImage = diceImgs[roll - 1];
                             dice[i].Text = "" + roll;
                         }
                     }
@@ -444,6 +447,7 @@ namespace bbone
             for (int i = 0; i < dice.Length; i++)
             {
                 int roll = rgen.Next(1, 7);
+                dice[i].BackgroundImage = diceImgs[roll - 1];
                 dice[i].Text = "" + roll;
                 dice[i].BackColor = Color.White;
                 dice[i].Enabled = true;
