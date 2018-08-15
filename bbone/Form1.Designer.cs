@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.die1 = new System.Windows.Forms.Button();
             this.die2 = new System.Windows.Forms.Button();
             this.die3 = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             this.currScore = new System.Windows.Forms.Label();
             this.straightLabel = new System.Windows.Forms.Label();
             this.roll_straight = new System.Windows.Forms.Button();
+            this.allSelectLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numPlayers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -473,11 +475,22 @@
             this.roll_straight.Visible = false;
             this.roll_straight.Click += new System.EventHandler(this.roll_straight_Click);
             // 
+            // allSelectLabel
+            // 
+            this.allSelectLabel.Location = new System.Drawing.Point(611, 330);
+            this.allSelectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.allSelectLabel.Name = "allSelectLabel";
+            this.allSelectLabel.Size = new System.Drawing.Size(212, 13);
+            this.allSelectLabel.TabIndex = 40;
+            this.allSelectLabel.Text = "You must roll again!";
+            this.allSelectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 372);
+            this.Controls.Add(this.allSelectLabel);
             this.Controls.Add(this.reroll_all);
             this.Controls.Add(this.roll_straight);
             this.Controls.Add(this.straightLabel);
@@ -518,6 +531,7 @@
             this.Controls.Add(this.die3);
             this.Controls.Add(this.die2);
             this.Controls.Add(this.die1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "bBones";
             ((System.ComponentModel.ISupportInitialize)(this.numPlayers)).EndInit();
@@ -568,6 +582,7 @@
         private System.Windows.Forms.Label currScore;
         private System.Windows.Forms.Label straightLabel;
         private System.Windows.Forms.Button roll_straight;
+        private System.Windows.Forms.Label allSelectLabel;
     }
 }
 

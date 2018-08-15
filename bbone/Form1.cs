@@ -302,6 +302,7 @@ namespace bbone
         private void roll_button_Click(object sender, EventArgs e)
         {
             error_msg.Visible = false;
+            allSelectLabel.Visible = false;
 
             if (DieSelectValidation() == true)
             {
@@ -338,36 +339,42 @@ namespace bbone
         private void endTurn_butt_Click(object sender, EventArgs e)
         {
             error_msg.Visible = false;
+            allSelectLabel.Visible = false;
 
-            int score = ScoreCalc();
+            if (dice[0].BackColor == Color.DarkGreen && dice[1].BackColor == Color.DarkGreen && dice[2].BackColor == Color.DarkGreen && dice[3].BackColor == Color.DarkGreen && dice[4].BackColor == Color.DarkGreen && dice[5].BackColor == Color.DarkGreen)
+                allSelectLabel.Visible = true;
+            else
+            {
+                int score = ScoreCalc();
 
-            // add to score (if player has appropriate points, of course)
-            if (scores[currentPlayer] == 0)
-                if (score < 1000) { }
+                // add to score (if player has appropriate points, of course)
+                if (scores[currentPlayer] == 0)
+                    if (score < 1000) { }
+                    else
+                        scores[currentPlayer] += score;
                 else
                     scores[currentPlayer] += score;
-            else
-                scores[currentPlayer] += score;
 
-            if (scores[currentPlayer] <= 950)
-            {
-                scores[currentPlayer] = 0;
+                if (scores[currentPlayer] <= 950)
+                {
+                    scores[currentPlayer] = 0;
+                    scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
+                }
+
+                // change label score, increment current player
                 scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
+                currentPlayer++;
+
+                // rollover current player
+                if (currentPlayer >= scores.Length)
+                    currentPlayer = 0;
+
+                // reset current score label
+                currScore.Text = "Current Roll Score: 0";
+
+                // end turn by rerolling all dice
+                reroll_all_Click(sender, e);
             }
-
-            // change label score, increment current player
-            scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
-            currentPlayer++;
-
-            // rollover current player
-            if (currentPlayer >= scores.Length)
-                currentPlayer = 0;
-
-            // reset current score label
-            currScore.Text = "Current Roll Score: 0";
-
-            // end turn by rerolling all dice
-            reroll_all_Click(sender, e);
         }
 
         // start/new game button
@@ -375,6 +382,7 @@ namespace bbone
         {
             error_msg.Visible = false;
             straightLabel.Visible = false;
+            allSelectLabel.Visible = false;
 
             // start the game
             if (numPlayers.Enabled == true)
@@ -442,8 +450,6 @@ namespace bbone
         // rerolling all dice function
         private void reroll_all_Click(object sender, EventArgs e)
         {
-            error_msg.Visible = false;
-
             for (int i = 0; i < dice.Length; i++)
             {
                 int roll = rgen.Next(1, 7);
