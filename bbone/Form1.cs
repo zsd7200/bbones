@@ -228,11 +228,13 @@ namespace bbone
             for (int i = 0; i < nameLabels.Length; i++)
             {
                 nameLabels[i].Visible = false;
+                nameLabels[i].ForeColor = Color.Black;
                 scoreLabels[i].Visible = false;
                 scoreLabels[i].AutoSize = false;
                 scoreLabels[i].TextAlign = ContentAlignment.MiddleRight;
             }
 
+            nameLabels[0].ForeColor = Color.MediumSlateBlue;
             currScore.Visible = false;
             error_msg.Visible = false;
             straightLabel.Visible = false;
@@ -380,11 +382,16 @@ namespace bbone
 
                 // change label score, increment current player
                 scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
+
+                Console.WriteLine(currentPlayer);
+                nameLabels[currentPlayer].ForeColor = Color.Black;
                 currentPlayer++;
 
                 // rollover current player
                 if (currentPlayer >= scores.Length)
                     currentPlayer = 0;
+
+                nameLabels[currentPlayer].ForeColor = Color.MediumSlateBlue;
 
                 // reset current score label
                 currScore.Text = "Current Roll Score: 0";
@@ -446,9 +453,12 @@ namespace bbone
                 for (int i = 0; i < scores.Length; i++)
                 {
                     nameLabels[i].Visible = false;
+                    nameLabels[i].ForeColor = Color.Black;
                     scoreLabels[i].Visible = false;
                     scores[i] = 0;
                 }
+
+                nameLabels[0].ForeColor = Color.MediumSlateBlue;
 
                 for (int i = 0; i < dice.Length; i++)
                 {

@@ -75,9 +75,10 @@
             // 
             // die1
             // 
-            this.die1.Location = new System.Drawing.Point(12, 12);
+            this.die1.Location = new System.Drawing.Point(16, 15);
+            this.die1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die1.Name = "die1";
-            this.die1.Size = new System.Drawing.Size(194, 170);
+            this.die1.Size = new System.Drawing.Size(259, 209);
             this.die1.TabIndex = 0;
             this.die1.Text = "die1";
             this.die1.UseVisualStyleBackColor = true;
@@ -85,9 +86,10 @@
             // 
             // die2
             // 
-            this.die2.Location = new System.Drawing.Point(212, 12);
+            this.die2.Location = new System.Drawing.Point(283, 15);
+            this.die2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die2.Name = "die2";
-            this.die2.Size = new System.Drawing.Size(194, 170);
+            this.die2.Size = new System.Drawing.Size(259, 209);
             this.die2.TabIndex = 1;
             this.die2.Text = "die2";
             this.die2.UseVisualStyleBackColor = true;
@@ -95,9 +97,10 @@
             // 
             // die3
             // 
-            this.die3.Location = new System.Drawing.Point(412, 12);
+            this.die3.Location = new System.Drawing.Point(549, 15);
+            this.die3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die3.Name = "die3";
-            this.die3.Size = new System.Drawing.Size(194, 170);
+            this.die3.Size = new System.Drawing.Size(259, 209);
             this.die3.TabIndex = 2;
             this.die3.Text = "die3";
             this.die3.UseVisualStyleBackColor = true;
@@ -105,9 +108,10 @@
             // 
             // die4
             // 
-            this.die4.Location = new System.Drawing.Point(12, 188);
+            this.die4.Location = new System.Drawing.Point(16, 231);
+            this.die4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die4.Name = "die4";
-            this.die4.Size = new System.Drawing.Size(194, 170);
+            this.die4.Size = new System.Drawing.Size(259, 209);
             this.die4.TabIndex = 3;
             this.die4.Text = "die4";
             this.die4.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             // 
             // die5
             // 
-            this.die5.Location = new System.Drawing.Point(212, 188);
+            this.die5.Location = new System.Drawing.Point(283, 231);
+            this.die5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die5.Name = "die5";
-            this.die5.Size = new System.Drawing.Size(194, 170);
+            this.die5.Size = new System.Drawing.Size(259, 209);
             this.die5.TabIndex = 4;
             this.die5.Text = "die5";
             this.die5.UseVisualStyleBackColor = true;
@@ -125,9 +130,10 @@
             // 
             // die6
             // 
-            this.die6.Location = new System.Drawing.Point(412, 188);
+            this.die6.Location = new System.Drawing.Point(549, 231);
+            this.die6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.die6.Name = "die6";
-            this.die6.Size = new System.Drawing.Size(194, 170);
+            this.die6.Size = new System.Drawing.Size(259, 209);
             this.die6.TabIndex = 5;
             this.die6.Text = "die6";
             this.die6.UseVisualStyleBackColor = true;
@@ -135,9 +141,10 @@
             // 
             // roll_button
             // 
-            this.roll_button.Location = new System.Drawing.Point(637, 65);
+            this.roll_button.Location = new System.Drawing.Point(849, 80);
+            this.roll_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.roll_button.Name = "roll_button";
-            this.roll_button.Size = new System.Drawing.Size(75, 23);
+            this.roll_button.Size = new System.Drawing.Size(100, 28);
             this.roll_button.TabIndex = 6;
             this.roll_button.Text = "Roll";
             this.roll_button.UseVisualStyleBackColor = true;
@@ -145,9 +152,10 @@
             // 
             // reroll_all
             // 
-            this.reroll_all.Location = new System.Drawing.Point(735, 304);
+            this.reroll_all.Location = new System.Drawing.Point(980, 374);
+            this.reroll_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reroll_all.Name = "reroll_all";
-            this.reroll_all.Size = new System.Drawing.Size(75, 23);
+            this.reroll_all.Size = new System.Drawing.Size(100, 28);
             this.reroll_all.TabIndex = 7;
             this.reroll_all.Text = "Roll All";
             this.reroll_all.UseVisualStyleBackColor = true;
@@ -156,9 +164,10 @@
             // 
             // endTurn_butt
             // 
-            this.endTurn_butt.Location = new System.Drawing.Point(718, 65);
+            this.endTurn_butt.Location = new System.Drawing.Point(957, 80);
+            this.endTurn_butt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.endTurn_butt.Name = "endTurn_butt";
-            this.endTurn_butt.Size = new System.Drawing.Size(75, 23);
+            this.endTurn_butt.Size = new System.Drawing.Size(100, 28);
             this.endTurn_butt.TabIndex = 8;
             this.endTurn_butt.Text = "End Turn";
             this.endTurn_butt.UseVisualStyleBackColor = true;
@@ -167,15 +176,17 @@
             // howMany
             // 
             this.howMany.AutoSize = true;
-            this.howMany.Location = new System.Drawing.Point(634, 12);
+            this.howMany.Location = new System.Drawing.Point(845, 15);
+            this.howMany.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.howMany.Name = "howMany";
-            this.howMany.Size = new System.Drawing.Size(96, 13);
+            this.howMany.Size = new System.Drawing.Size(129, 17);
             this.howMany.TabIndex = 9;
             this.howMany.Text = "Number of Players:";
             // 
             // numPlayers
             // 
-            this.numPlayers.Location = new System.Drawing.Point(762, 10);
+            this.numPlayers.Location = new System.Drawing.Point(1016, 12);
+            this.numPlayers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numPlayers.Maximum = new decimal(new int[] {
             12,
             0,
@@ -187,7 +198,7 @@
             0,
             0});
             this.numPlayers.Name = "numPlayers";
-            this.numPlayers.Size = new System.Drawing.Size(31, 20);
+            this.numPlayers.Size = new System.Drawing.Size(41, 22);
             this.numPlayers.TabIndex = 10;
             this.numPlayers.Value = new decimal(new int[] {
             1,
@@ -197,9 +208,10 @@
             // 
             // startButt
             // 
-            this.startButt.Location = new System.Drawing.Point(637, 36);
+            this.startButt.Location = new System.Drawing.Point(849, 44);
+            this.startButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.startButt.Name = "startButt";
-            this.startButt.Size = new System.Drawing.Size(156, 23);
+            this.startButt.Size = new System.Drawing.Size(208, 28);
             this.startButt.TabIndex = 11;
             this.startButt.Text = "Start Game";
             this.startButt.UseVisualStyleBackColor = true;
@@ -208,108 +220,120 @@
             // p1_score
             // 
             this.p1_score.AutoSize = true;
-            this.p1_score.Location = new System.Drawing.Point(634, 101);
+            this.p1_score.Location = new System.Drawing.Point(845, 124);
+            this.p1_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p1_score.Name = "p1_score";
-            this.p1_score.Size = new System.Drawing.Size(57, 13);
+            this.p1_score.Size = new System.Drawing.Size(76, 17);
             this.p1_score.TabIndex = 12;
             this.p1_score.Text = "Player 1: b";
             // 
             // p2_score
             // 
             this.p2_score.AutoSize = true;
-            this.p2_score.Location = new System.Drawing.Point(634, 119);
+            this.p2_score.Location = new System.Drawing.Point(845, 146);
+            this.p2_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p2_score.Name = "p2_score";
-            this.p2_score.Size = new System.Drawing.Size(57, 13);
+            this.p2_score.Size = new System.Drawing.Size(76, 17);
             this.p2_score.TabIndex = 13;
             this.p2_score.Text = "Player 2: b";
             // 
             // p3_score
             // 
             this.p3_score.AutoSize = true;
-            this.p3_score.Location = new System.Drawing.Point(634, 137);
+            this.p3_score.Location = new System.Drawing.Point(845, 169);
+            this.p3_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p3_score.Name = "p3_score";
-            this.p3_score.Size = new System.Drawing.Size(57, 13);
+            this.p3_score.Size = new System.Drawing.Size(76, 17);
             this.p3_score.TabIndex = 14;
             this.p3_score.Text = "Player 3: b";
             // 
             // p4_score
             // 
             this.p4_score.AutoSize = true;
-            this.p4_score.Location = new System.Drawing.Point(634, 155);
+            this.p4_score.Location = new System.Drawing.Point(845, 191);
+            this.p4_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p4_score.Name = "p4_score";
-            this.p4_score.Size = new System.Drawing.Size(57, 13);
+            this.p4_score.Size = new System.Drawing.Size(76, 17);
             this.p4_score.TabIndex = 15;
             this.p4_score.Text = "Player 4: b";
             // 
             // p5_score
             // 
             this.p5_score.AutoSize = true;
-            this.p5_score.Location = new System.Drawing.Point(634, 173);
+            this.p5_score.Location = new System.Drawing.Point(845, 213);
+            this.p5_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p5_score.Name = "p5_score";
-            this.p5_score.Size = new System.Drawing.Size(57, 13);
+            this.p5_score.Size = new System.Drawing.Size(76, 17);
             this.p5_score.TabIndex = 16;
             this.p5_score.Text = "Player 5: b";
             // 
             // p6_score
             // 
             this.p6_score.AutoSize = true;
-            this.p6_score.Location = new System.Drawing.Point(634, 191);
+            this.p6_score.Location = new System.Drawing.Point(845, 235);
+            this.p6_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p6_score.Name = "p6_score";
-            this.p6_score.Size = new System.Drawing.Size(57, 13);
+            this.p6_score.Size = new System.Drawing.Size(76, 17);
             this.p6_score.TabIndex = 17;
             this.p6_score.Text = "Player 6: b";
             // 
             // p7_score
             // 
             this.p7_score.AutoSize = true;
-            this.p7_score.Location = new System.Drawing.Point(634, 209);
+            this.p7_score.Location = new System.Drawing.Point(845, 257);
+            this.p7_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p7_score.Name = "p7_score";
-            this.p7_score.Size = new System.Drawing.Size(57, 13);
+            this.p7_score.Size = new System.Drawing.Size(76, 17);
             this.p7_score.TabIndex = 18;
             this.p7_score.Text = "Player 7: b";
             // 
             // p8_score
             // 
             this.p8_score.AutoSize = true;
-            this.p8_score.Location = new System.Drawing.Point(634, 227);
+            this.p8_score.Location = new System.Drawing.Point(845, 279);
+            this.p8_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p8_score.Name = "p8_score";
-            this.p8_score.Size = new System.Drawing.Size(57, 13);
+            this.p8_score.Size = new System.Drawing.Size(76, 17);
             this.p8_score.TabIndex = 19;
             this.p8_score.Text = "Player 8: b";
             // 
             // p9_score
             // 
             this.p9_score.AutoSize = true;
-            this.p9_score.Location = new System.Drawing.Point(634, 245);
+            this.p9_score.Location = new System.Drawing.Point(845, 302);
+            this.p9_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p9_score.Name = "p9_score";
-            this.p9_score.Size = new System.Drawing.Size(57, 13);
+            this.p9_score.Size = new System.Drawing.Size(76, 17);
             this.p9_score.TabIndex = 20;
             this.p9_score.Text = "Player 9: b";
             // 
             // p10_score
             // 
             this.p10_score.AutoSize = true;
-            this.p10_score.Location = new System.Drawing.Point(634, 263);
+            this.p10_score.Location = new System.Drawing.Point(845, 324);
+            this.p10_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p10_score.Name = "p10_score";
-            this.p10_score.Size = new System.Drawing.Size(63, 13);
+            this.p10_score.Size = new System.Drawing.Size(84, 17);
             this.p10_score.TabIndex = 21;
             this.p10_score.Text = "Player 10: b";
             // 
             // p11_score
             // 
             this.p11_score.AutoSize = true;
-            this.p11_score.Location = new System.Drawing.Point(634, 281);
+            this.p11_score.Location = new System.Drawing.Point(845, 346);
+            this.p11_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p11_score.Name = "p11_score";
-            this.p11_score.Size = new System.Drawing.Size(63, 13);
+            this.p11_score.Size = new System.Drawing.Size(84, 17);
             this.p11_score.TabIndex = 22;
             this.p11_score.Text = "Player 11: b";
             // 
             // p12_score
             // 
             this.p12_score.AutoSize = true;
-            this.p12_score.Location = new System.Drawing.Point(634, 299);
+            this.p12_score.Location = new System.Drawing.Point(845, 368);
+            this.p12_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p12_score.Name = "p12_score";
-            this.p12_score.Size = new System.Drawing.Size(63, 13);
+            this.p12_score.Size = new System.Drawing.Size(84, 17);
             this.p12_score.TabIndex = 23;
             this.p12_score.Text = "Player 12: b";
             // 
@@ -317,9 +341,10 @@
             // 
             this.p12_num.AutoSize = true;
             this.p12_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p12_num.Location = new System.Drawing.Point(742, 299);
+            this.p12_num.Location = new System.Drawing.Point(989, 368);
+            this.p12_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p12_num.Name = "p12_num";
-            this.p12_num.Size = new System.Drawing.Size(51, 13);
+            this.p12_num.Size = new System.Drawing.Size(67, 17);
             this.p12_num.TabIndex = 35;
             this.p12_num.Text = "p12_num";
             // 
@@ -327,9 +352,10 @@
             // 
             this.p11_num.AutoSize = true;
             this.p11_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p11_num.Location = new System.Drawing.Point(742, 281);
+            this.p11_num.Location = new System.Drawing.Point(989, 346);
+            this.p11_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p11_num.Name = "p11_num";
-            this.p11_num.Size = new System.Drawing.Size(51, 13);
+            this.p11_num.Size = new System.Drawing.Size(67, 17);
             this.p11_num.TabIndex = 34;
             this.p11_num.Text = "p11_num";
             // 
@@ -337,9 +363,10 @@
             // 
             this.p10_num.AutoSize = true;
             this.p10_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p10_num.Location = new System.Drawing.Point(742, 263);
+            this.p10_num.Location = new System.Drawing.Point(989, 324);
+            this.p10_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p10_num.Name = "p10_num";
-            this.p10_num.Size = new System.Drawing.Size(51, 13);
+            this.p10_num.Size = new System.Drawing.Size(67, 17);
             this.p10_num.TabIndex = 33;
             this.p10_num.Text = "p10_num";
             // 
@@ -347,9 +374,10 @@
             // 
             this.p9_num.AutoSize = true;
             this.p9_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p9_num.Location = new System.Drawing.Point(742, 245);
+            this.p9_num.Location = new System.Drawing.Point(989, 302);
+            this.p9_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p9_num.Name = "p9_num";
-            this.p9_num.Size = new System.Drawing.Size(45, 13);
+            this.p9_num.Size = new System.Drawing.Size(59, 17);
             this.p9_num.TabIndex = 32;
             this.p9_num.Text = "p9_num";
             // 
@@ -357,9 +385,10 @@
             // 
             this.p8_num.AutoSize = true;
             this.p8_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p8_num.Location = new System.Drawing.Point(742, 227);
+            this.p8_num.Location = new System.Drawing.Point(989, 279);
+            this.p8_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p8_num.Name = "p8_num";
-            this.p8_num.Size = new System.Drawing.Size(45, 13);
+            this.p8_num.Size = new System.Drawing.Size(59, 17);
             this.p8_num.TabIndex = 31;
             this.p8_num.Text = "p8_num";
             // 
@@ -367,9 +396,10 @@
             // 
             this.p7_num.AutoSize = true;
             this.p7_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p7_num.Location = new System.Drawing.Point(742, 209);
+            this.p7_num.Location = new System.Drawing.Point(989, 257);
+            this.p7_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p7_num.Name = "p7_num";
-            this.p7_num.Size = new System.Drawing.Size(45, 13);
+            this.p7_num.Size = new System.Drawing.Size(59, 17);
             this.p7_num.TabIndex = 30;
             this.p7_num.Text = "p7_num";
             // 
@@ -377,9 +407,10 @@
             // 
             this.p6_num.AutoSize = true;
             this.p6_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p6_num.Location = new System.Drawing.Point(742, 191);
+            this.p6_num.Location = new System.Drawing.Point(989, 235);
+            this.p6_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p6_num.Name = "p6_num";
-            this.p6_num.Size = new System.Drawing.Size(45, 13);
+            this.p6_num.Size = new System.Drawing.Size(59, 17);
             this.p6_num.TabIndex = 29;
             this.p6_num.Text = "p6_num";
             // 
@@ -387,9 +418,10 @@
             // 
             this.p5_num.AutoSize = true;
             this.p5_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p5_num.Location = new System.Drawing.Point(742, 173);
+            this.p5_num.Location = new System.Drawing.Point(989, 213);
+            this.p5_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p5_num.Name = "p5_num";
-            this.p5_num.Size = new System.Drawing.Size(45, 13);
+            this.p5_num.Size = new System.Drawing.Size(59, 17);
             this.p5_num.TabIndex = 28;
             this.p5_num.Text = "p5_num";
             // 
@@ -397,9 +429,10 @@
             // 
             this.p4_num.AutoSize = true;
             this.p4_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p4_num.Location = new System.Drawing.Point(742, 155);
+            this.p4_num.Location = new System.Drawing.Point(989, 191);
+            this.p4_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p4_num.Name = "p4_num";
-            this.p4_num.Size = new System.Drawing.Size(45, 13);
+            this.p4_num.Size = new System.Drawing.Size(59, 17);
             this.p4_num.TabIndex = 27;
             this.p4_num.Text = "p4_num";
             // 
@@ -407,9 +440,10 @@
             // 
             this.p3_num.AutoSize = true;
             this.p3_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p3_num.Location = new System.Drawing.Point(742, 137);
+            this.p3_num.Location = new System.Drawing.Point(989, 169);
+            this.p3_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p3_num.Name = "p3_num";
-            this.p3_num.Size = new System.Drawing.Size(45, 13);
+            this.p3_num.Size = new System.Drawing.Size(59, 17);
             this.p3_num.TabIndex = 26;
             this.p3_num.Text = "p3_num";
             // 
@@ -417,9 +451,10 @@
             // 
             this.p2_num.AutoSize = true;
             this.p2_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p2_num.Location = new System.Drawing.Point(742, 119);
+            this.p2_num.Location = new System.Drawing.Point(989, 146);
+            this.p2_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p2_num.Name = "p2_num";
-            this.p2_num.Size = new System.Drawing.Size(45, 13);
+            this.p2_num.Size = new System.Drawing.Size(59, 17);
             this.p2_num.TabIndex = 25;
             this.p2_num.Text = "p2_num";
             // 
@@ -427,48 +462,47 @@
             // 
             this.p1_num.AutoSize = true;
             this.p1_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p1_num.Location = new System.Drawing.Point(742, 101);
+            this.p1_num.Location = new System.Drawing.Point(989, 124);
+            this.p1_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p1_num.Name = "p1_num";
-            this.p1_num.Size = new System.Drawing.Size(45, 13);
+            this.p1_num.Size = new System.Drawing.Size(59, 17);
             this.p1_num.TabIndex = 24;
             this.p1_num.Text = "p1_num";
             // 
             // error_msg
             // 
             this.error_msg.AutoSize = true;
-            this.error_msg.Location = new System.Drawing.Point(669, 330);
-            this.error_msg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.error_msg.Location = new System.Drawing.Point(892, 406);
             this.error_msg.Name = "error_msg";
-            this.error_msg.Size = new System.Drawing.Size(103, 13);
+            this.error_msg.Size = new System.Drawing.Size(134, 17);
             this.error_msg.TabIndex = 36;
             this.error_msg.Text = "Invalid die selection!";
             this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // currScore
             // 
-            this.currScore.Location = new System.Drawing.Point(654, 350);
-            this.currScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.currScore.Location = new System.Drawing.Point(872, 431);
             this.currScore.Name = "currScore";
-            this.currScore.Size = new System.Drawing.Size(132, 13);
+            this.currScore.Size = new System.Drawing.Size(176, 16);
             this.currScore.TabIndex = 37;
             this.currScore.Text = "Current Roll Score: 0";
             this.currScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // straightLabel
             // 
-            this.straightLabel.Location = new System.Drawing.Point(611, 330);
-            this.straightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.straightLabel.Location = new System.Drawing.Point(815, 406);
             this.straightLabel.Name = "straightLabel";
-            this.straightLabel.Size = new System.Drawing.Size(212, 13);
+            this.straightLabel.Size = new System.Drawing.Size(283, 16);
             this.straightLabel.TabIndex = 38;
             this.straightLabel.Text = "Rolled a straight! You must end your turn.";
             this.straightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roll_straight
             // 
-            this.roll_straight.Location = new System.Drawing.Point(616, 304);
+            this.roll_straight.Location = new System.Drawing.Point(821, 374);
+            this.roll_straight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.roll_straight.Name = "roll_straight";
-            this.roll_straight.Size = new System.Drawing.Size(75, 23);
+            this.roll_straight.Size = new System.Drawing.Size(100, 28);
             this.roll_straight.TabIndex = 39;
             this.roll_straight.Text = "Roll Straight";
             this.roll_straight.UseVisualStyleBackColor = true;
@@ -477,19 +511,18 @@
             // 
             // allSelectLabel
             // 
-            this.allSelectLabel.Location = new System.Drawing.Point(611, 330);
-            this.allSelectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.allSelectLabel.Location = new System.Drawing.Point(815, 406);
             this.allSelectLabel.Name = "allSelectLabel";
-            this.allSelectLabel.Size = new System.Drawing.Size(212, 13);
+            this.allSelectLabel.Size = new System.Drawing.Size(283, 16);
             this.allSelectLabel.TabIndex = 40;
             this.allSelectLabel.Text = "You must roll again!";
             this.allSelectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 372);
+            this.ClientSize = new System.Drawing.Size(1096, 458);
             this.Controls.Add(this.allSelectLabel);
             this.Controls.Add(this.reroll_all);
             this.Controls.Add(this.roll_straight);
@@ -532,6 +565,7 @@
             this.Controls.Add(this.die2);
             this.Controls.Add(this.die1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "bBones";
             ((System.ComponentModel.ISupportInitialize)(this.numPlayers)).EndInit();
