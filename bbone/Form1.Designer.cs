@@ -76,7 +76,7 @@
             // die1
             // 
             this.die1.Location = new System.Drawing.Point(16, 15);
-            this.die1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die1.Margin = new System.Windows.Forms.Padding(4);
             this.die1.Name = "die1";
             this.die1.Size = new System.Drawing.Size(259, 209);
             this.die1.TabIndex = 0;
@@ -87,7 +87,7 @@
             // die2
             // 
             this.die2.Location = new System.Drawing.Point(283, 15);
-            this.die2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die2.Margin = new System.Windows.Forms.Padding(4);
             this.die2.Name = "die2";
             this.die2.Size = new System.Drawing.Size(259, 209);
             this.die2.TabIndex = 1;
@@ -98,7 +98,7 @@
             // die3
             // 
             this.die3.Location = new System.Drawing.Point(549, 15);
-            this.die3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die3.Margin = new System.Windows.Forms.Padding(4);
             this.die3.Name = "die3";
             this.die3.Size = new System.Drawing.Size(259, 209);
             this.die3.TabIndex = 2;
@@ -109,7 +109,7 @@
             // die4
             // 
             this.die4.Location = new System.Drawing.Point(16, 231);
-            this.die4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die4.Margin = new System.Windows.Forms.Padding(4);
             this.die4.Name = "die4";
             this.die4.Size = new System.Drawing.Size(259, 209);
             this.die4.TabIndex = 3;
@@ -120,7 +120,7 @@
             // die5
             // 
             this.die5.Location = new System.Drawing.Point(283, 231);
-            this.die5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die5.Margin = new System.Windows.Forms.Padding(4);
             this.die5.Name = "die5";
             this.die5.Size = new System.Drawing.Size(259, 209);
             this.die5.TabIndex = 4;
@@ -131,7 +131,7 @@
             // die6
             // 
             this.die6.Location = new System.Drawing.Point(549, 231);
-            this.die6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.die6.Margin = new System.Windows.Forms.Padding(4);
             this.die6.Name = "die6";
             this.die6.Size = new System.Drawing.Size(259, 209);
             this.die6.TabIndex = 5;
@@ -142,7 +142,7 @@
             // roll_button
             // 
             this.roll_button.Location = new System.Drawing.Point(849, 80);
-            this.roll_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roll_button.Margin = new System.Windows.Forms.Padding(4);
             this.roll_button.Name = "roll_button";
             this.roll_button.Size = new System.Drawing.Size(100, 28);
             this.roll_button.TabIndex = 6;
@@ -153,7 +153,7 @@
             // reroll_all
             // 
             this.reroll_all.Location = new System.Drawing.Point(980, 374);
-            this.reroll_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reroll_all.Margin = new System.Windows.Forms.Padding(4);
             this.reroll_all.Name = "reroll_all";
             this.reroll_all.Size = new System.Drawing.Size(100, 28);
             this.reroll_all.TabIndex = 7;
@@ -165,7 +165,7 @@
             // endTurn_butt
             // 
             this.endTurn_butt.Location = new System.Drawing.Point(957, 80);
-            this.endTurn_butt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.endTurn_butt.Margin = new System.Windows.Forms.Padding(4);
             this.endTurn_butt.Name = "endTurn_butt";
             this.endTurn_butt.Size = new System.Drawing.Size(100, 28);
             this.endTurn_butt.TabIndex = 8;
@@ -186,7 +186,7 @@
             // numPlayers
             // 
             this.numPlayers.Location = new System.Drawing.Point(1016, 12);
-            this.numPlayers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numPlayers.Margin = new System.Windows.Forms.Padding(4);
             this.numPlayers.Maximum = new decimal(new int[] {
             12,
             0,
@@ -209,7 +209,7 @@
             // startButt
             // 
             this.startButt.Location = new System.Drawing.Point(849, 44);
-            this.startButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startButt.Margin = new System.Windows.Forms.Padding(4);
             this.startButt.Name = "startButt";
             this.startButt.Size = new System.Drawing.Size(208, 28);
             this.startButt.TabIndex = 11;
@@ -341,7 +341,7 @@
             // 
             this.p12_num.AutoSize = true;
             this.p12_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p12_num.Location = new System.Drawing.Point(989, 368);
+            this.p12_num.Location = new System.Drawing.Point(990, 368);
             this.p12_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p12_num.Name = "p12_num";
             this.p12_num.Size = new System.Drawing.Size(67, 17);
@@ -352,7 +352,7 @@
             // 
             this.p11_num.AutoSize = true;
             this.p11_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p11_num.Location = new System.Drawing.Point(989, 346);
+            this.p11_num.Location = new System.Drawing.Point(990, 346);
             this.p11_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p11_num.Name = "p11_num";
             this.p11_num.Size = new System.Drawing.Size(67, 17);
@@ -363,7 +363,7 @@
             // 
             this.p10_num.AutoSize = true;
             this.p10_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p10_num.Location = new System.Drawing.Point(989, 324);
+            this.p10_num.Location = new System.Drawing.Point(990, 324);
             this.p10_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p10_num.Name = "p10_num";
             this.p10_num.Size = new System.Drawing.Size(67, 17);
@@ -374,100 +374,100 @@
             // 
             this.p9_num.AutoSize = true;
             this.p9_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p9_num.Location = new System.Drawing.Point(989, 302);
+            this.p9_num.Location = new System.Drawing.Point(990, 302);
             this.p9_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p9_num.Name = "p9_num";
-            this.p9_num.Size = new System.Drawing.Size(59, 17);
+            this.p9_num.Size = new System.Drawing.Size(67, 17);
             this.p9_num.TabIndex = 32;
-            this.p9_num.Text = "p9_num";
+            this.p9_num.Text = "p9_num0";
             // 
             // p8_num
             // 
             this.p8_num.AutoSize = true;
             this.p8_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p8_num.Location = new System.Drawing.Point(989, 279);
+            this.p8_num.Location = new System.Drawing.Point(990, 279);
             this.p8_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p8_num.Name = "p8_num";
-            this.p8_num.Size = new System.Drawing.Size(59, 17);
+            this.p8_num.Size = new System.Drawing.Size(67, 17);
             this.p8_num.TabIndex = 31;
-            this.p8_num.Text = "p8_num";
+            this.p8_num.Text = "p8_num0";
             // 
             // p7_num
             // 
             this.p7_num.AutoSize = true;
             this.p7_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p7_num.Location = new System.Drawing.Point(989, 257);
+            this.p7_num.Location = new System.Drawing.Point(990, 257);
             this.p7_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p7_num.Name = "p7_num";
-            this.p7_num.Size = new System.Drawing.Size(59, 17);
+            this.p7_num.Size = new System.Drawing.Size(67, 17);
             this.p7_num.TabIndex = 30;
-            this.p7_num.Text = "p7_num";
+            this.p7_num.Text = "p7_num0";
             // 
             // p6_num
             // 
             this.p6_num.AutoSize = true;
             this.p6_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p6_num.Location = new System.Drawing.Point(989, 235);
+            this.p6_num.Location = new System.Drawing.Point(990, 235);
             this.p6_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p6_num.Name = "p6_num";
-            this.p6_num.Size = new System.Drawing.Size(59, 17);
+            this.p6_num.Size = new System.Drawing.Size(67, 17);
             this.p6_num.TabIndex = 29;
-            this.p6_num.Text = "p6_num";
+            this.p6_num.Text = "p6_num0";
             // 
             // p5_num
             // 
             this.p5_num.AutoSize = true;
             this.p5_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p5_num.Location = new System.Drawing.Point(989, 213);
+            this.p5_num.Location = new System.Drawing.Point(990, 213);
             this.p5_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p5_num.Name = "p5_num";
-            this.p5_num.Size = new System.Drawing.Size(59, 17);
+            this.p5_num.Size = new System.Drawing.Size(67, 17);
             this.p5_num.TabIndex = 28;
-            this.p5_num.Text = "p5_num";
+            this.p5_num.Text = "p5_num0";
             // 
             // p4_num
             // 
             this.p4_num.AutoSize = true;
             this.p4_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p4_num.Location = new System.Drawing.Point(989, 191);
+            this.p4_num.Location = new System.Drawing.Point(990, 191);
             this.p4_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p4_num.Name = "p4_num";
-            this.p4_num.Size = new System.Drawing.Size(59, 17);
+            this.p4_num.Size = new System.Drawing.Size(67, 17);
             this.p4_num.TabIndex = 27;
-            this.p4_num.Text = "p4_num";
+            this.p4_num.Text = "p4_num0";
             // 
             // p3_num
             // 
             this.p3_num.AutoSize = true;
             this.p3_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p3_num.Location = new System.Drawing.Point(989, 169);
+            this.p3_num.Location = new System.Drawing.Point(990, 169);
             this.p3_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p3_num.Name = "p3_num";
-            this.p3_num.Size = new System.Drawing.Size(59, 17);
+            this.p3_num.Size = new System.Drawing.Size(67, 17);
             this.p3_num.TabIndex = 26;
-            this.p3_num.Text = "p3_num";
+            this.p3_num.Text = "p3_num0";
             // 
             // p2_num
             // 
             this.p2_num.AutoSize = true;
             this.p2_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p2_num.Location = new System.Drawing.Point(989, 146);
+            this.p2_num.Location = new System.Drawing.Point(990, 146);
             this.p2_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p2_num.Name = "p2_num";
-            this.p2_num.Size = new System.Drawing.Size(59, 17);
+            this.p2_num.Size = new System.Drawing.Size(67, 17);
             this.p2_num.TabIndex = 25;
-            this.p2_num.Text = "p2_num";
+            this.p2_num.Text = "p2_num0";
             // 
             // p1_num
             // 
             this.p1_num.AutoSize = true;
             this.p1_num.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.p1_num.Location = new System.Drawing.Point(989, 124);
+            this.p1_num.Location = new System.Drawing.Point(990, 124);
             this.p1_num.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p1_num.Name = "p1_num";
-            this.p1_num.Size = new System.Drawing.Size(59, 17);
+            this.p1_num.Size = new System.Drawing.Size(67, 17);
             this.p1_num.TabIndex = 24;
-            this.p1_num.Text = "p1_num";
+            this.p1_num.Text = "p1_num0";
             // 
             // error_msg
             // 
@@ -500,7 +500,7 @@
             // roll_straight
             // 
             this.roll_straight.Location = new System.Drawing.Point(821, 374);
-            this.roll_straight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roll_straight.Margin = new System.Windows.Forms.Padding(4);
             this.roll_straight.Name = "roll_straight";
             this.roll_straight.Size = new System.Drawing.Size(100, 28);
             this.roll_straight.TabIndex = 39;
@@ -565,7 +565,7 @@
             this.Controls.Add(this.die2);
             this.Controls.Add(this.die1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "bBones";
             ((System.ComponentModel.ISupportInitialize)(this.numPlayers)).EndInit();

@@ -60,7 +60,7 @@ namespace bbone
         }
 
         // make sure the dice selected are valid
-        private bool DieSelectValidation()
+        private bool DieSelectValidation(bool store)
         {
             int[] count = CountDice();
 
@@ -79,7 +79,10 @@ namespace bbone
             if (count[0] == 0 && count[1] == 0 && count[2] == 0 && count[3] == 0 && count[4] == 0 && count[5] == 0)
                 return false;
 
-            rolls.Add(count);
+            // only save a roll if store is passed in to be true
+            // DieSelect(false) is called in endRoll to make sure the turn isn't being ended illegally
+            if (store == true)
+                rolls.Add(count);
 
             return true;
         }
@@ -323,7 +326,7 @@ namespace bbone
             error_msg.Visible = false;
             allSelectLabel.Visible = false;
 
-            if (DieSelectValidation() == true)
+            if (DieSelectValidation(true) == true)
             {
                 // if all dice are selected, reroll all
                 if (dice[0].BackColor == Color.DarkGreen && dice[1].BackColor == Color.DarkGreen && dice[2].BackColor == Color.DarkGreen && dice[3].BackColor == Color.DarkGreen && dice[4].BackColor == Color.DarkGreen && dice[5].BackColor == Color.DarkGreen)
@@ -364,40 +367,52 @@ namespace bbone
                 allSelectLabel.Visible = true;
             else
             {
-                int score = ScoreCalc();
+                // this for loop makes it so every die is counted when you end your turn
+                // this way you don't have to click things on your last turn for them to be counted
+                for (int i = 0; i < dice.Length; i++)
+                    dice[i].BackColor = Color.DarkGreen;
 
-                // add to score (if player has appropriate points, of course)
-                if (scores[currentPlayer] == 0)
-                    if (score < 1000) { }
-                    else
-                        scores[currentPlayer] += score;
-                else
-                    scores[currentPlayer] += score;
-
-                if (scores[currentPlayer] <= 950)
+                // check to make sure you're not illegally ending turn with full set of scoring dice
+                if (DieSelectValidation(false) == true) // DieSelectValidation's param is false so it won't store the same roll twice
                 {
-                    scores[currentPlayer] = 0;
-                    scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
+                    allSelectLabel.Visible = true;
+                    UpdateScoreText();
                 }
 
-                // change label score, increment current player
-                scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
+                else
+                {
+                    int score = ScoreCalc();
 
-                Console.WriteLine(currentPlayer);
-                nameLabels[currentPlayer].ForeColor = Color.Black;
-                currentPlayer++;
+                    // add to score (if player has appropriate points, of course)
+                    if (scores[currentPlayer] == 0)
+                    {
+                        if (score > 1000)
+                            scores[currentPlayer] += score;
+                    }
+                    else
+                        scores[currentPlayer] += score;
 
-                // rollover current player
-                if (currentPlayer >= scores.Length)
-                    currentPlayer = 0;
+                    if (scores[currentPlayer] <= 950)
+                        scores[currentPlayer] = 0;
 
-                nameLabels[currentPlayer].ForeColor = Color.MediumSlateBlue;
+                    // change label score, increment current player, change highlighted player name
+                    scoreLabels[currentPlayer].Text = "" + scores[currentPlayer];
 
-                // reset current score label
-                currScore.Text = "Current Roll Score: 0";
+                    nameLabels[currentPlayer].ForeColor = Color.Black;
+                    currentPlayer++;
 
-                // end turn by rerolling all dice
-                reroll_all_Click(sender, e);
+                    // rollover current player
+                    if (currentPlayer >= scores.Length)
+                        currentPlayer = 0;
+
+                    nameLabels[currentPlayer].ForeColor = Color.MediumSlateBlue;
+
+                    // reset current score label
+                    currScore.Text = "Current Roll Score: 0";
+
+                    // end turn by rerolling all dice
+                    reroll_all_Click(sender, e);
+                }
             }
         }
 
