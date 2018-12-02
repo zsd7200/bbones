@@ -3,7 +3,7 @@ bBones, a dice game written in C# and WinForms.
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
-![Screenshot](https://raw.githubusercontent.com/zsd7200/bbones/master/img/screenshot.png "Screenshot taken from 0.8.1.1 pre-release.")
+![Screenshot](https://raw.githubusercontent.com/zsd7200/bbones/4cc6e2ed0d0b3b16bdb7c1b1ed9bcc3a466104c1/img/screenshot.png "Screenshot taken from 0.8.1.1 pre-release.")
 
 Bones, also known as [Dice 10000](https://en.wikipedia.org/wiki/Dice_10000), as well as a few other names, is a family-friendly dice game, in which the goal is to get to 10000 points.
 
