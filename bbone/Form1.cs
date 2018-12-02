@@ -386,7 +386,7 @@ namespace bbone
                     // add to score (if player has appropriate points, of course)
                     if (scores[currentPlayer] == 0)
                     {
-                        if (score > 1000)
+                        if (score >= 1000)
                             scores[currentPlayer] += score;
                     }
                     else
